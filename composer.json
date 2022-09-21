@@ -1,0 +1,7 @@
+{
+  "name":  "dovereem/rdw-api-client",
+  "description": "API Client for the RDW (Rijksdienst Wegverkeer) OpenData API (https://opendata.rdw.nl/) ",
+  "require": {
+    "php": ">=7.4"
+  }
+}
