@@ -1,7 +1,29 @@
 {
-  "name":  "dovereem/rdw-api-client",
-  "description": "API Client for the RDW (Rijksdienst Wegverkeer) OpenData API (https://opendata.rdw.nl/) ",
-  "require": {
-    "php": ">=7.4"
-  }
+    "name": "dovereem/rdw-api-client",
+    "description": "API Client for the RDW (Rijksdienst Wegverkeer) OpenData API (https://opendata.rdw.nl/) ",
+    "keywords": [
+        "rdw",
+        "opendata",
+        "rijksdienst",
+        "wegverkeer",
+        "api",
+        "client"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damien Overeem",
+            "email": "damien@overeem.org",
+            "homepage": "https://damien.overeem.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DOvereem\\": "src/"
+        }
+    }
 }
