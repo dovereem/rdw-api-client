@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DOvereem\RdwApiClient;
+namespace DOvereem\RDW\RDWOpenDataApiClient;
 
 class RdwApiEndpoints
 {

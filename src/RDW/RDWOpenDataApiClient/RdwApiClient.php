@@ -1,21 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace DOvereem\RdwApiClient;
+namespace DOvereem\RDW\RDWOpenDataApiClient;
 
-use DOvereem\RdwApiClient\Exception\ServiceUnavailableException;
-use DOvereem\RdwApiClient\Exception\UnexpectedApiResponseException;
+use DOvereem\RDW\RDWOpenDataApiClient\Exception\ServiceUnavailableException;
+use DOvereem\RDW\RDWOpenDataApiClient\Exception\UnexpectedApiResponseException;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Response;
 use JsonException;
 
 class RdwApiClient
 {
-
-    private $apiUrl = 'https://opendata.rdw.nl/resource/m9d7-ebf2.json';
-
-
-
     protected function createGuzzleClient(): Client
     {
         return new Client([
