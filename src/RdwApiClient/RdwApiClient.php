@@ -52,11 +52,16 @@ class RdwApiClient
             throw new UnexpectedApiResponseException("API endpoint did not return valid JSON. Received: " . $response->getBody()->getContents());
         }
 
+        if (!is_array($results)) {
+            throw new UnexpectedApiResponseException("API endpoint did not return an expected JSON array. Received: " . $response->getBody()->getContents());
+        }
+
         return $results;
     }
 
 
-    public function getLicensedVehicleDataByLicensePlateNumber(string $licensePlateNumber): ?array {
+    public function getLicensedVehicleDataByLicensePlateNumber(string $licensePlateNumber): array
+    {
         $licensePlateNumber = $this->normalizeLicensePlateNumber($licensePlateNumber);
 
         $response = $this->createGuzzleClient()->get(
@@ -67,7 +72,7 @@ class RdwApiClient
         );
         $results = $this->processApiResponse($response);
 
-        return empty($results) ? null : $results[0];
+        return empty($results) ? [] : $results[0];
     }
 
 }
