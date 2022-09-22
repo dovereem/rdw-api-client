@@ -13,6 +13,9 @@ class RDWOpenDataApiClient
     protected function createGuzzleClient(): Client
     {
         return new Client([
+            'connect_timeout' => 5,
+            'timeout' => 10,
+            'http_errors' => false,
             'headers' => [
                 'Content-Type' => 'application/json',
                 'Accept' => 'application/json'
