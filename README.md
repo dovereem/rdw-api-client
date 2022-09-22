@@ -11,7 +11,7 @@ Because this is Open Data provided by the government an API key is not needed.
 ## Usage:
 
 ```
-$rdwApiClient = new \DOvereem\RdwApiClient\RdwApiClient();
+$rdwApiClient = new \DOvereem\RDW\RDWOpenDataApiClient\RDWOpenDataApiClient;
 $vehicleData = $rdwApiClient->getLicensedVehicleDataByLicensePlateNumber("AA-BB-CC");
 ```
 

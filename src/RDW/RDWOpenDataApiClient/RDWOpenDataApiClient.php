@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
 use JsonException;
 
-class RdwApiClient
+class RDWOpenDataApiClient
 {
     protected function createGuzzleClient(): Client
     {
@@ -59,7 +59,7 @@ class RdwApiClient
         $licensePlateNumber = $this->normalizeLicensePlateNumber($licensePlateNumber);
 
         $response = $this->createGuzzleClient()->get(
-            RdwApiEndpoints::LICENCED_VEHICLES,
+            RDWOpenDataApiEndpoints::LICENCED_VEHICLES,
             [
                 'query' => $this->createQuery('kenteken', $licensePlateNumber)
             ]
